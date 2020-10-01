@@ -1,28 +1,86 @@
-<!DOCTYPE html>
-<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
-<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
-<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
-<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title></title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="">
-    </head>
+<!doctype html>
+<html class="no-js" lang="es">
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
+
+  <!-- Bootstrap CSS -->
+  <!-- <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous"> -->
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <!-- <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script> -->
+  <script src="js/bootstrap.js"></script>
+  <script src="js/jquery-3.5.1.min.js"></script>
+  <script src="js/popper/popper-lite.js"></script>
+
+  <meta name="theme-color" content="#fafafa">
+  <style>
+      .login_box{
+        position: absolute;
+        top:250px;
+        right: 200px;
+      }
+  </style>
+</head>
     <body>
         <!--[if lt IE 7]>
             <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
         <![endif]-->
-        <center> <h1>Iniciar Sesión </h1>
-        <form action="Controllers/login.controller.php" method="POST">
-            <p><input type="text" name="user" id="user" value="" placeholder="USUARIO"></p>
-            <p><input type="password" name="contra" id="contra" value="" placeholder="*******"></p>
-            <button type="submit">Ingresar</button> <br> </br>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md">
+                    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+                      <a class="navbar-brand" href="#">Navbar</a>
+                      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+
+                      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <ul class="navbar-nav mr-auto">
+                          <li class="nav-item active">
+                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                          </li>
+                          
+                        </ul>
+                        <form class="form-inline my-2 my-lg-0">
+                          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+                        </form>
+                      </div>
+                    </nav>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="login_box">
+                    <center>
+                        <h3 >Ingreso al sistema</h3>
+                        <form action="Controllers/login.controller.php" method="POST">
+                            <p><input type="text" name="user" id="user" class="form-control" placeholder="usuario"></p>
+                            <p><input type="password" name="contra" id="contra" class="form-control" placeholder="*******"></p>
+                            <button type="submit" class="btn btn-success">Ingresar</button> <br> </br>
+                        
+                        </form>
+                    </center>
+                </div class="login_box">
+                <center>
+                </div>
+            </div>
+            
+            
         
-        </form>
-        
-    </center>
-     </body>
-</html>
+         </body>
+    </html>                 </center>
